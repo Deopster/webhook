@@ -1,16 +1,9 @@
-# This is a sample Python script.
+from discord_webhook import DiscordWebhook, DiscordEmbed
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+webhook = DiscordWebhook(url="https://discordapp.com/api/webhooks/957640927592202351/1Xo0BM52Njqh7MUk14wpN8eKE729mRMLf7PORj-cvF5u6G-XlQ3ttSXbfiP8w0pfLeSJ", username="TestUser")
 
-
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
-
-
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+embed = DiscordEmbed(
+    title="Lvl ?? | chat channel 12 ", description="Ut enim ad minima veniam, nam libero tempore, cum soluta nobis est eligendi optio, cumque nihil impedit, quo minus id, quod maxime placeat, facere possimus, omnis voluptas assumenda est, omnis dolor repellendus! Ut enim ad minim veniam, nam libero tempore, cum soluta nobis est eligendi optio, cumque nihil impedit, quo minus id, quod maxime placeat, sunt in culpa qui officia deserunt mollit anim id est laborum", color='03b2f8'
+)
+webhook.add_embed(embed)
+response = webhook.execute()
